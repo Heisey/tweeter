@@ -1,0 +1,63 @@
+.Tweeting {
+  position: relative;
+  width: 100%;
+  background-color: #4056a1;
+  color: white;
+}
+
+.Tweeting__title {
+  text-align: center;
+}
+
+.Tweeting__form {
+  width: inherit;
+  background-color: orangered;
+  position: relative;
+  width: 97%;
+  margin: auto;
+}
+
+.Tweeting__form--label {
+  padding-top: 15px;
+  padding-left: 15px;
+  display: block;
+}
+
+
+
+.Tweeting__form--textArea {
+  border: none;
+  border-bottom: 5px solid black;
+  display: block;
+  width: 98%;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+  margin: auto;
+  padding-top: 7px;
+}
+
+.Tweeting__form--footer {
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.Tweeting__form--button {
+  margin: 7px;
+  color: white;
+  background-color:#4056a1;
+  border: none;
+  border-radius: 5px;
+  font-family: "Bungee";
+}
+
+.Tweeting__form--counter {
+  margin: 7px;
+  display: block;
+  
+}
