@@ -1,0 +1,17 @@
+.Tweet {
+  background-color: green;
+  color: white;
+
+  width: 97%;
+  margin: auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    
+
+    &--container {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  background-image: url("/images/purty-wood.png");
+  background-color: #291900; }
+
+.container {
+  width: 90%;
+  margin: auto; }
+
+.Tweets {
+  background-color: gold;
+  width: 100%; }
+
+.Header {
+  background-color: greenyellow;
+  height: 400px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white; }
+  .Header__img {
+    padding-top: 30px; }
+
+.Nav {
+  height: 120px;
+  width: 100vw;
+  z-index: 100;
+  background-color: #4056a1;
+  color: #ffff;
+  position: fixed;
+  overflow: hidden; }
+  .Nav__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+  .Nav__logo {
+    padding: 1.5em;
+    font-family: "Bungee"; }
+  .Nav__input {
+    padding: 1.5em; }
+  .Nav__spacer {
+    height: 120px;
+    position: relative; }
+
+.Nav__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+
+.Nav__logo {
+  padding: 1.5em;
+  font-family: "Bungee"; }
+
+.Nav__input {
+  padding: 1.5em; }
+
+.Nav__spacer {
+  height: 120px;
+  position: relative; }
+
+.Tweet {
+  background-color: green;
+  color: white;
+  width: 97%;
+  margin: auto; }
+  .Tweet__header {
+    display: flex;
+    justify-content: space-between; }
+    .Tweet__header--container {
+      display: flex; }
+
+.Tweeting {
+  margin-top: -30px;
+  position: relative;
+  width: 100%;
+  background-color: #4056a1;
+  color: white; }
+  .Tweeting__title {
+    text-align: center; }
+  .Tweeting__form {
+    background-color: orangered;
+    position: relative;
+    width: 97%;
+    margin: auto; }
+    .Tweeting__form--label {
+      padding-top: 15px;
+      padding-left: 15px;
+      display: block; }
+    .Tweeting__form--textArea {
+      border: none;
+      border-bottom: 5px solid black;
+      display: block;
+      width: 98%;
+      outline: none;
+      resize: none;
+      background-color: transparent;
+      margin: auto;
+      padding-top: 7px; }
+    .Tweeting__form--footer {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: flex;
+      justify-content: space-between; }
+    .Tweeting__form--button {
+      margin: 7px;
+      color: white;
+      background-color: #4056a1;
+      border: none;
+      border-radius: 5px;
+      font-family: "Bungee"; }
+    .Tweeting__form--counter {
+      margin: 7px;
+      display: block; }

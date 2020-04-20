@@ -1,4 +1,5 @@
 .Header {
+  background-color: greenyellow;
   height: 400px;
   width: 100vw;
   display: flex;
@@ -6,8 +7,8 @@
   align-items: center;
   justify-content: center;
   color: white;
-}
 
-.Header__img {
-  padding-top: 30px;
+  &__img {
+    padding-top: 30px;
+  }
 }

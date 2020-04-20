@@ -1,0 +1,59 @@
+.Tweeting {
+  margin-top: -30px;
+  position: relative;
+  width: 100%;
+  background-color: #4056a1;
+  color: white;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__form {
+    background-color: orangered;
+    position: relative;
+    width: 97%;
+    margin: auto;
+
+    &--label {
+      padding-top: 15px;
+      padding-left: 15px;
+      display: block;
+    }
+
+    &--textArea {
+      border: none;
+      border-bottom: 5px solid black;
+      display: block;
+      width: 98%;
+      outline: none;
+      resize: none;
+      background-color: transparent;
+      margin: auto;
+      padding-top: 7px;
+    }
+
+    &--footer {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px; 
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--button {
+      margin: 7px;
+      color: white;
+      background-color:#4056a1;
+      border: none;
+      border-radius: 5px;
+      font-family: "Bungee";
+    }
+
+    &--counter {
+      margin: 7px;
+      display: block;
+    }
+  }
+}

@@ -6,6 +6,26 @@
   color: #ffff;
   position: fixed;
   overflow: hidden;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    padding: 1.5em;
+    font-family: "Bungee";
+  }
+
+  &__input {
+    padding: 1.5em;
+  }
+
+  &__spacer {
+    height: 120px;
+    position: relative;
+  }
 }
 
 .Nav__container {
