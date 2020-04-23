@@ -1,3 +1,22 @@
+
+
+// ????????????????????????? Client Side ??????????????????????????
+
+// ~~ DOM READY
+$(document).ready(function() {
+
+  // ~~ Event Handlers
+  // ~~ Form Submit
+  $("#Tweeting__form").submit(submitFormData)
+
+  // ~~ Form Toggle
+  $("#Nav__button").click(toggleForm)
+
+  // ~~ Dom Events
+  // ~~ Load Tweets
+  loadTweets()
+})
+
 // ~~ Escape text function
 const myEscape =  function(str) {
 
@@ -10,7 +29,6 @@ const myEscape =  function(str) {
   // ~~ return text node from div
   return div.innerHTML;
 }
-
 
 // ~~ Create Tweet Template
 const createTweetElement = data => {
@@ -95,7 +113,7 @@ const dataFailed = function(error) {
 // ~~ Load Tweets to DOM
 const loadTweets = function() {
 
-  // ~~ Make a get request to DB
+  // ## Make a get request to DB
   $.ajax({
     type: "GET",
     url: "/tweets",
@@ -104,24 +122,48 @@ const loadTweets = function() {
   })
 }
 
+// ~~ Submit Tweet Data
 const submitFormData = function(e) {
+
+  // ~~ Stop Reload
   e.preventDefault()
   
+  // ~~ Warning Element
   const warningNode = $( this ).children().first()
-  const formData = $( this ).serialize();
-  $(this)[0].reset()
 
+  // ~~ Form Data
+  const formData = $( this ).serialize();
+
+  // ~~ Clear and Hide Warning Element
   warningNode.text('')
   warningNode.hide();
   
+  // !! Check for empty str
   if (formData === null || formData.split('text=')[1] === '') {
+
+    // ~~ Set Warning Element text
     warningNode.text('You must chirp something!')
+
+    // ~~ Show Warning Element
     return warningNode.slideDown()
+
+  // !! Check character length
   } else if (formData.length > 140) {
-    return warningNode.text('Your chirping to much, try a little less')
+
+    // ~~ Set Warning Element text
+    warningNode.text('Your chirping to much, try a little less')
+
+    // ~~ Show Warning Node
+    return warningNode.slideDown()
   }
-  $(this).parent().parent().children().last().empty()
   
+  // ~~ Clear Tweets from DOM
+  $(this).parent().parent().children().last().empty()
+
+  // ~~ Clear Form input
+  $(this)[0].reset()
+  
+  // ## Add Tweet to DB
   $.ajax({
     type: "POST",
     url: '/tweets',
@@ -131,7 +173,7 @@ const submitFormData = function(e) {
   })
 }
 
-
+// ~~ Toggle Tweet Form
 const toggleForm = function(e) {
   $(this)
     .parent()
@@ -144,18 +186,3 @@ const toggleForm = function(e) {
     .first()
     .slideToggle('slow')
 }
-
-
-
-
-
-
-$(document).ready(function() {
-
-  $("#Tweeting__form").submit(submitFormData)
-
-  $("#Nav__button").click(toggleForm)
-
-  loadTweets()
-
-})
