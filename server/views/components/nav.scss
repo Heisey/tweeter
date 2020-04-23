@@ -18,32 +18,18 @@
     font-family: "Bungee";
   }
 
-  &__input {
-    padding: 1.5em;
+  &__button {
+    height: 45px;
+    width: 100px;
+    align-self: center;
+    margin-right: 1em;
+    background-color: $sands-light;
+    color: $ferra;
+    font-weight: 700;
+    border: 5px solid $ferra
   }
 
-  &__spacer {
-    height: 120px;
-    position: relative;
+  @include screenBP(tab-land) {
+    border-bottom: none;
   }
-}
-
-.Nav__container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.Nav__logo {
-  padding: 1.5em;
-  font-family: "Bungee";
-}
-
-.Nav__input {
-  padding: 1.5em;
-}
-
-.Nav__spacer {
-  height: 120px;
-  position: relative;
 }

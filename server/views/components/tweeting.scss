@@ -12,6 +12,7 @@
 
   &__title {
     text-align: center;
+    color: $sands-light;
   }
 
   &__form {
@@ -20,6 +21,11 @@
     width: 97%;
     margin: auto;
     border: 1em solid $ferra;
+
+    &--warning {
+      text-align: center;
+      color: red;
+    }
 
     &--label {
       padding-top: 15px;
@@ -50,8 +56,8 @@
 
     &--button {
       margin: 7px;
-      color: white;
       background-color:#4056a1;
+      color: $peridot-light;
       border: none;
       border-radius: 5px;
       font-family: "Bungee";
@@ -59,6 +65,7 @@
 
     &--counter {
       margin: 7px;
+      color: $ferra;
       display: block;
     }
   }
@@ -67,5 +74,9 @@
   @include screenBP(tab-land) {
     top: 0;
     grid-column-start: 1;
+
+    &__title {
+      display: none;;
+    }
   }
 }

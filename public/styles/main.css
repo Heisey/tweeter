@@ -76,34 +76,28 @@ body {
   .Nav__logo {
     padding: 1.5em;
     font-family: "Bungee"; }
-  .Nav__input {
-    padding: 1.5em; }
-  .Nav__spacer {
-    height: 120px;
-    position: relative; }
-
-.Nav__container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between; }
-
-.Nav__logo {
-  padding: 1.5em;
-  font-family: "Bungee"; }
-
-.Nav__input {
-  padding: 1.5em; }
-
-.Nav__spacer {
-  height: 120px;
-  position: relative; }
+  .Nav__button {
+    height: 45px;
+    width: 100px;
+    align-self: center;
+    margin-right: 1em;
+    background-color: #EFF6DC;
+    color: #6B4541;
+    font-weight: 700;
+    border: 5px solid #6B4541; }
+  @media (max-width: 37.5em) {
+    .Nav {
+      border-bottom: none; } }
+  @media (max-width: 75em) {
+    .Nav {
+      border-bottom: none; } }
 
 .Tweet {
-  background-color: green;
-  color: white;
+  background-color: #EFF6DC;
+  color: #6B4541;
   width: 97%;
   margin: auto;
-  border: 5px solid black;
+  border: 1em solid #6B4541;
   margin-top: 30px; }
   .Tweet__header {
     display: flex;
@@ -153,13 +147,17 @@ body {
   grid-column-start: 2;
   grid-column-end: 3; }
   .Tweeting__title {
-    text-align: center; }
+    text-align: center;
+    color: #EFF6DC; }
   .Tweeting__form {
     background-color: #EFF6DC;
     position: relative;
     width: 97%;
     margin: auto;
     border: 1em solid #6B4541; }
+    .Tweeting__form--warning {
+      text-align: center;
+      color: red; }
     .Tweeting__form--label {
       padding-top: 15px;
       padding-left: 15px;
@@ -183,22 +181,27 @@ body {
       justify-content: space-between; }
     .Tweeting__form--button {
       margin: 7px;
-      color: white;
       background-color: #4056a1;
+      color: #CCD086;
       border: none;
       border-radius: 5px;
       font-family: "Bungee"; }
     .Tweeting__form--counter {
       margin: 7px;
+      color: #6B4541;
       display: block; }
   @media (max-width: 37.5em) {
     .Tweeting {
       top: 0;
-      grid-column-start: 1; } }
+      grid-column-start: 1; }
+      .Tweeting__title {
+        display: none; } }
   @media (max-width: 75em) {
     .Tweeting {
       top: 0;
-      grid-column-start: 1; } }
+      grid-column-start: 1; }
+      .Tweeting__title {
+        display: none; } }
 
 .Grid {
   display: grid;

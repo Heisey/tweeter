@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
   const tweetingFormText = $('#Tweeting__form--text');
-  const tweetingFormCounter = $('#Tweeting__form--counter');
-
-
+  
   tweetingFormText.on('input', e => {
     
     const inputLength = e.target.value.length;
@@ -12,7 +10,7 @@ $(document).ready(function() {
     if (inputLength > 140) {
           counter.css("color", "red")
     } else {
-          counter.css("color", "white")
+          counter.css("color", "#684541")
     }
 
     counter.text(140 - inputLength)
