@@ -2,6 +2,11 @@
 
 // ????????????????????????? Client Side ??????????????????????????
 
+const dateDiffer = date => {
+  const day = 24 * 60 * 60 * 1000;
+  return Math.floor(Math.abs((Date.now() - date) / day))
+}
+
 // ~~ DOM READY
 $(document).ready(function() {
 
@@ -38,6 +43,8 @@ const createTweetElement = data => {
   const content = data.content.text;
   const { created_at } = data;
 
+  const date = dateDiffer(created_at)
+
   // ~~ Insert variables into template 
   const tweet = `
     <article class="Tweet">
@@ -57,7 +64,7 @@ const createTweetElement = data => {
       </div>
       <footer class="Tweet__footer">
         <span class="Tweet__footer--date">
-          ${myEscape(created_at)} days ago
+          ${myEscape(date)} days ago
         </span>
         <div class="Tweet__footer--container">
           <span class="Tweet__footer--flag">
