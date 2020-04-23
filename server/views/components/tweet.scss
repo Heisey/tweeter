@@ -4,14 +4,72 @@
 
   width: 97%;
   margin: auto;
+  border: 5px solid black;
+  margin-top: 30px;
 
   &__header {
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     &--container {
       display: flex;
     }
+
+    &--icon {
+      font-size: 30px;
+    }
+
+    &--name {
+      padding-left: 10px;
+    }
+
+    &--handle {
+      opacity: 0;
+    }
+  }
+
+  &__body {
+    width: 97%;
+    margin: auto;
+    border-bottom: 5px solid black;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    margin: auto;
+    padding-bottom: 15px;
+
+    &--date {
+      padding-top: 15px;
+      font-size: 15px;
+    }
+
+    &--container {
+      padding-top: 8px;
+      font-size: 15px;
+    }
+
+    &--retweet {
+      padding-left: 10px;
+    }
+
+    &--love {
+      padding-left: 10px;
+    }
+  }
+
+  &:hover {
+    box-shadow: 10px 10px 0px -2px rgba(0,0,0,0.31);
+  }
+
+  &:hover &__header--handle {
+    
+    opacity: 1;
   }
 }

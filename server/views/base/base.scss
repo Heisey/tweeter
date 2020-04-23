@@ -1,20 +1,21 @@
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
+  color: $peridot-light;
+  font-size: 2.5em;
   font-family: "Source Sans Pro", sans-serif;
   background-image: url("/images/purty-wood.png");
-  background-color: #291900;
+  background-color: $shadow-dark;
 }
 
 .container {
-  width: 90%;
-  margin: auto;
+  position: relative;
+  overflow-y: scroll;
+  height: 100vh;
 }

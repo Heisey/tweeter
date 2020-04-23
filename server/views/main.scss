@@ -1,3 +1,6 @@
+@import 'abstracts/media-queries';
+@import 'abstracts/_variables';
+
 @import 'base/base';
 @import 'base/tweets';
 
@@ -5,3 +8,5 @@
 @import 'components/nav';
 @import 'components/tweet';
 @import 'components/tweeting';
+
+@import 'layout/grid.scss';

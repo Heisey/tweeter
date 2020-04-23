@@ -2,10 +2,10 @@
   height: 120px;
   width: 100vw;
   z-index: 100;
-  background-color: #4056a1;
-  color: #ffff;
+  background-color: $atoll;
   position: fixed;
   overflow: hidden;
+  border-bottom: 5px solid $ferra;
 
   &__container {
     width: 100%;

@@ -1,0 +1,9 @@
+.Grid {
+
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+
+  @include screenBP(tab-land) {
+    grid-template-columns: 100%;
+  }
+}

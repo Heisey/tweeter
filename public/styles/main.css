@@ -1,45 +1,74 @@
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 62.5%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
+  color: #CCD086;
+  font-size: 2.5em;
   font-family: "Source Sans Pro", sans-serif;
   background-image: url("/images/purty-wood.png");
-  background-color: #291900; }
+  background-color: #564A2F; }
 
 .container {
-  width: 90%;
-  margin: auto; }
+  position: relative;
+  overflow-y: scroll;
+  height: 100vh; }
 
 .Tweets {
-  background-color: gold;
-  width: 100%; }
+  width: 100%;
+  margin-top: 35vh; }
+  @media (max-width: 37.5em) {
+    .Tweets {
+      margin-top: 0; } }
+  @media (max-width: 75em) {
+    .Tweets {
+      margin-top: 0; } }
 
 .Header {
-  background-color: greenyellow;
-  height: 400px;
-  width: 100vw;
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-top: 30vh;
+  margin-left: 10vw;
+  width: 30vw;
+  height: 30vw;
+  background-color: #086370;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: white; }
+  justify-content: center; }
   .Header__img {
     padding-top: 30px; }
+    .Header__img img {
+      width: 15vw; }
+  @media (max-width: 37.5em) {
+    .Header {
+      width: 100vw;
+      height: 40vw;
+      top: 120px;
+      margin-top: 0;
+      margin-left: 0;
+      justify-content: flex-start; } }
+  @media (max-width: 75em) {
+    .Header {
+      width: 100vw;
+      height: 40vw;
+      top: 120px;
+      margin-top: 0;
+      margin-left: 0;
+      justify-content: flex-start; } }
 
 .Nav {
   height: 120px;
   width: 100vw;
   z-index: 100;
-  background-color: #4056a1;
-  color: #ffff;
+  background-color: #086370;
   position: fixed;
-  overflow: hidden; }
+  overflow: hidden;
+  border-bottom: 5px solid #6B4541; }
   .Nav__container {
     width: 100%;
     display: flex;
@@ -73,26 +102,64 @@ body {
   background-color: green;
   color: white;
   width: 97%;
-  margin: auto; }
+  margin: auto;
+  border: 5px solid black;
+  margin-top: 30px; }
   .Tweet__header {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px; }
     .Tweet__header--container {
       display: flex; }
+    .Tweet__header--icon {
+      font-size: 30px; }
+    .Tweet__header--name {
+      padding-left: 10px; }
+    .Tweet__header--handle {
+      opacity: 0; }
+  .Tweet__body {
+    width: 97%;
+    margin: auto;
+    border-bottom: 5px solid black; }
+  .Tweet__footer {
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    margin: auto;
+    padding-bottom: 15px; }
+    .Tweet__footer--date {
+      padding-top: 15px;
+      font-size: 15px; }
+    .Tweet__footer--container {
+      padding-top: 8px;
+      font-size: 15px; }
+    .Tweet__footer--retweet {
+      padding-left: 10px; }
+    .Tweet__footer--love {
+      padding-left: 10px; }
+  .Tweet:hover {
+    box-shadow: 10px 10px 0px -2px rgba(0, 0, 0, 0.31); }
+  .Tweet:hover .Tweet__header--handle {
+    opacity: 1; }
 
 .Tweeting {
-  margin-top: -30px;
   position: relative;
   width: 100%;
-  background-color: #4056a1;
-  color: white; }
+  color: #6B4541;
+  top: 25vh;
+  grid-column-start: 2;
+  grid-column-end: 3; }
   .Tweeting__title {
     text-align: center; }
   .Tweeting__form {
-    background-color: orangered;
+    background-color: #EFF6DC;
     position: relative;
     width: 97%;
-    margin: auto; }
+    margin: auto;
+    border: 1em solid #6B4541; }
     .Tweeting__form--label {
       padding-top: 15px;
       padding-left: 15px;
@@ -124,3 +191,21 @@ body {
     .Tweeting__form--counter {
       margin: 7px;
       display: block; }
+  @media (max-width: 37.5em) {
+    .Tweeting {
+      top: 0;
+      grid-column-start: 1; } }
+  @media (max-width: 75em) {
+    .Tweeting {
+      top: 0;
+      grid-column-start: 1; } }
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%); }
+  @media (max-width: 37.5em) {
+    .Grid {
+      grid-template-columns: 100%; } }
+  @media (max-width: 75em) {
+    .Grid {
+      grid-template-columns: 100%; } }

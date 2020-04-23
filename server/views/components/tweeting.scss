@@ -1,19 +1,25 @@
 .Tweeting {
-  margin-top: -30px;
   position: relative;
   width: 100%;
-  background-color: #4056a1;
-  color: white;
+  color: $ferra;
+  top: 25vh;
+  
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  
+
 
   &__title {
     text-align: center;
   }
 
   &__form {
-    background-color: orangered;
+    background-color: $sands-light;
     position: relative;
     width: 97%;
     margin: auto;
+    border: 1em solid $ferra;
 
     &--label {
       padding-top: 15px;
@@ -55,5 +61,11 @@
       margin: 7px;
       display: block;
     }
+  }
+
+
+  @include screenBP(tab-land) {
+    top: 0;
+    grid-column-start: 1;
   }
 }

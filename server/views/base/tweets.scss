@@ -1,5 +1,8 @@
 .Tweets {
-  background-color: gold;
-
   width: 100%;
+  margin-top: 35vh;
+
+  @include screenBP(tab-land) {
+    margin-top: 0;
+  }
 }
