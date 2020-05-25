@@ -117,7 +117,8 @@ body {
   .Tweet__body {
     width: 97%;
     margin: auto;
-    border-bottom: 5px solid black; }
+    border-bottom: 5px solid black;
+    word-wrap: break-word; }
   .Tweet__footer {
     display: flex;
     justify-content: space-between;

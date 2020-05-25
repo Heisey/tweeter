@@ -144,6 +144,7 @@ const submitFormData = function(e) {
   // ~~ Clear and Hide Warning Element
   warningNode.text('')
   warningNode.hide();
+
   
   // !! Check for empty str
   if (formData === null || formData.split('text=')[1] === '') {
@@ -155,7 +156,7 @@ const submitFormData = function(e) {
     return warningNode.slideDown()
 
   // !! Check character length
-  } else if (formData.length > 140) {
+  } else if (formData.split('text=')[1].length > 140) {
 
     // ~~ Set Warning Element text
     warningNode.text('Your chirping to much, try a little less')
